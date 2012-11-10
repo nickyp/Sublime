@@ -1,0 +1,17 @@
+[
+  // Emacs style Esc,Backspace killing
+  { 
+    "keys": ["escape", "backspace"], 
+    "command": "delete_word", 
+    "args": { "forward": false, "sub_words": true } ,
+    "context": // context, so you don't have press ESC twice in find bar.
+    [
+        { "key": "setting.is_widget", "operator": "equal", "operand": false }
+    ]
+  },
+  // RubyMine like (custom TextmateEmacs keymap)
+  { "keys": ["ctrl+d"], "command": "duplicate_line" },
+  { "keys": ["ctrl+w"], "command": "expand_selection", "args": {"to": "scope"} },
+  { "keys": ["ctrl+shift+j"], "command": "join_lines" }
+
+]
